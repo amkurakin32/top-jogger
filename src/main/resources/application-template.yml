@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/schema-name?useUnicode=true&serverTimezone=UTC
+    username:
+    password:
+    validation-query: select 1
+  flyway:
+    baselineOnMigrate: true
+open:
+  weather:
+    host: https://api.openweathermap.org
+    token:
