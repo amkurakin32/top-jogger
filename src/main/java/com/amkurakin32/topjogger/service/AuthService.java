@@ -1,0 +1,19 @@
+package com.amkurakin32.topjogger.service;
+
+import com.amkurakin32.topjogger.model.db.User;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Service;
+
+@Service
+public class AuthService {
+
+    public User getCurrentAuthenticatedUser() {
+        Authentication u = SecurityContextHolder.getContext().getAuthentication();
+        if (u == null) {
+            throw new AccessDeniedException("User is not authenticated");
+        }
+        return (User) u.getPrincipal();
+    }
+}
