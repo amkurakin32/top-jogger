@@ -22,7 +22,7 @@ public class WeatherLog {
   private float cloudiness;
   private double windSpeed;
   private float windDeg;
-  private float windGust;
+  private double windGust;
   private int pressure;
   private int visibility;
 
@@ -33,7 +33,7 @@ public class WeatherLog {
     this.cloudiness = historyWeatherResponse.getCurrent().getClouds();
     this.windSpeed = historyWeatherResponse.getCurrent().getWindSpeed();
     this.windDeg = historyWeatherResponse.getCurrent().getWindDeg();
-    this.windGust = 0;
+    this.windGust = historyWeatherResponse.getCurrent().getWindGust();
     this.pressure = historyWeatherResponse.getCurrent().getPressure();
     this.visibility = historyWeatherResponse.getCurrent().getVisibility();
   }

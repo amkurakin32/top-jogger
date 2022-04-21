@@ -45,7 +45,7 @@ public class RunLogResponse {
     private float windDeg;
 
     @ApiModelProperty(dataType = "float", value = "Wind gust in meter/sec", example = "5.5")
-    private float windGust;
+    private double windGust;
 
     @ApiModelProperty(dataType = "int", value = " Atmospheric pressure hPa", example = "1027")
     private int pressure;
