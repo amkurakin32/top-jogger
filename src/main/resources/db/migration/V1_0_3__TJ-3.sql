@@ -1,0 +1,1 @@
+DROP INDEX idx_weather_log_lat_lon ON weather_log;

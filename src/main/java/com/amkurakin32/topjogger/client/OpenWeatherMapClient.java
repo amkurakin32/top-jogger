@@ -30,7 +30,7 @@ public class OpenWeatherMapClient {
 
     public HistoryWeatherResponse getCurrentWeather(float lat, float lon, Date date) {
         ResponseEntity<HistoryWeatherResponse> response = webClient.get()
-                .uri(openWeatherHost + historyWeatherPath, lat, lon, date.getTime(), openWeatherToken)
+                .uri(openWeatherHost + historyWeatherPath, lat, lon, date.getTime() / 1000, openWeatherToken)
                 .accept(APPLICATION_JSON)
                 .retrieve()
                 .toEntity(HistoryWeatherResponse.class)

@@ -61,6 +61,9 @@ public class HistoryWeatherResponse {
 
         @JsonProperty("wind_speed")
         private double windSpeed;
+
+        @JsonProperty("wind_gust")
+        private double windGust;
     }
 
     @Data
