@@ -24,7 +24,7 @@ public class RunLog {
     private Date addedAt;
     private int distance;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "weather_log_id", referencedColumnName = "id")
     @NotFound(action = NotFoundAction.IGNORE)
     private WeatherLog weatherLog;
