@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;MODE=MySQL;NON_KEYWORDS=USER
+    username: sa
+    password: sa
+    validation-query: select 1
+  flyway:
+    baselineOnMigrate: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+open:
+  weather:
+    host: https://api.openweathermap.org
+    token:
